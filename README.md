@@ -170,10 +170,10 @@ Code for advanced usage will be released at a later date.
 If you find this repo useful for your research, please consider citing the paper
 
 ```
-@article{luo2021learning,
+@article{luo2022learning,
   title={Learning Neural Acoustic Fields},
   author={Luo, Andrew and Du, Yilun and Tarr, Michael J and Tenenbaum, Joshua B and Torralba, Antonio and Gan, Chuang},
-  journal={arXiv preprint arXiv:},
-  year={2021}
+  journal={arXiv preprint arXiv:2204.00628},
+  year={2022}
 }
 ```
