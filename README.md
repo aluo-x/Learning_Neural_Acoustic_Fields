@@ -4,7 +4,7 @@ Code release for: **Learning Neural Acoustic Fields**
   <img src="./pictures/NAF_arch.png" width="70%">
 </p>
 
-[Paper link](arxiv.org), [Project site](https://www.andrew.cmu.edu/user/afluo/Neural_Acoustic_Fields/),
+[Paper link](https://arxiv.org/abs/2204.00628), [Project site](https://www.andrew.cmu.edu/user/afluo/Neural_Acoustic_Fields/),
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1C1qyOMFUBlrdEiaWJQ_1Zi5UDHvWumyk?usp=sharing)
 
 
