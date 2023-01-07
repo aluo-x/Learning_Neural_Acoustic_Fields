@@ -1,4 +1,4 @@
-# Learning Neural Acoustic Fields
+# Learning Neural Acoustic Fields (Accepted at NeurIPS 2022)
 Code release for: **Learning Neural Acoustic Fields**
 <p align="center">
   <img src="./pictures/NAF_arch.png" width="70%">
