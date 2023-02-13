@@ -12,7 +12,7 @@ def to_wave(input_spec, mean_val=None, std_val=None, gl=False, orig_phase=None):
         renorm_input = renorm_input + mean_val
     else:
         renorm_input = input_spec + 0.0
-    renorm_input = renorm_input
+    renorm_input = np.concatenate((renorm_input, renorm_input[-1:]*0.0), axis=0)
     if orig_phase is None:
         if gl == False:
             # Random phase reconstruction per image2reverb
@@ -22,7 +22,7 @@ def to_wave(input_spec, mean_val=None, std_val=None, gl=False, orig_phase=None):
             f = renorm_input * (np.cos(rp) + (1.j * np.sin(rp)))
             out_wave = librosa.istft(f)
         else:
-            out_wave = librosa.griffinlim(renorm_input, win_length=400, hop_length=200, n_iter=100, momentum=0.5, random_state=64)
+            out_wave = librosa.griffinlim(renorm_input, win_length=512, hop_length=128, n_iter=100, momentum=0.5, random_state=64)
     else:
         f = renorm_input * (np.cos(orig_phase) + (1.j * np.sin(orig_phase)))
         out_wave = librosa.istft(f)
