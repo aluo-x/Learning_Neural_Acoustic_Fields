@@ -16,6 +16,8 @@ Our environment is filled with rich and dynamic acoustic information. When we wa
 
 Note: This code implementation does not model phase, and instead uses random phase [test_utils.py#L21](https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/testing/test_utils.py#L21) similar to Image2Reverb. We still include the code to generate instantaneous frequency phase information in the function [if_compute](https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/data_loading/data_maker.ipynb), and to go back to the wav in [get_wave_if](https://github.com/aluo-x/Learning_Neural_Acoustic_Fields/blob/master/data_loading/data_maker.ipynb). We observe that this released code can achieve better/comparable spectral/T60 error than the variant described in the paper, and yields fewer clicking artifacts when stiching the demo video. Prior work like Image2Reverb, Signal Agnoistic Manifolds use random/griffin-lim phase and learn magnitude only representations, while followup work like [AV-NeRF](https://arxiv.org/abs/2302.02088) also do not learn the phase and reuse the input phase.
 
+Note that Opus bitrate is specified per channel, while ffmpeg AAC specifies bitrate for all channels. Due to this, the current AAC baseline code also follows the paper and uses double the per-channel bitrate of Opus. For future work, you should consider halving the AAC bitrate from the current code to match Opus for additional fairness.
+
 #### Demo (unmute!)
 https://user-images.githubusercontent.com/15619682/158037642-6a5bd731-e45f-4eb1-b29f-60447acfb824.mp4
 
